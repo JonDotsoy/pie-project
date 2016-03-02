@@ -122,7 +122,7 @@
 			
 			<form action="" method="post">
       <div style="text-align:center; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; color:#FFF;">
-        <h1 align="center">Editar Información</h1>
+        <h1 align="center">Editar InformaciÃ³n</h1>
         <input type="text" name="boxBuscar" id="boxBuscar" autofocus="autofocus" value="" placeholder="Ingrese un dato." />
         <input type="submit" name="botonBuscar" value="Buscar" id="botonBuscar" />
         <input type="submit" name="botonListar" value="Listar Todos" id="botonListar" />

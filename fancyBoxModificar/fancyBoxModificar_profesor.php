@@ -10,26 +10,43 @@
 <title>Editar</title>
 <script type="text/javascript" src="../ajax/ajax.js"></script>
 <script type="text/javascript">
-	var PROF_PASS="", PROF_NOMBRE="", PROF_AP_PAT="", PROF_AP_MAT="", PROF_TELEFONO="", PROF_DIRECCION="", PROF_EMAIL="", PROF_GEN_ID="",pk="";	
+	var PROF_PASS="",
+		PROF_NOMBRE="",
+		PROF_AP_PAT="",
+		PROF_AP_MAT="",
+		PROF_TELEFONO="",
+		PROF_DIRECCION="",
+		PROF_EMAIL="",
+		PROF_GEN_ID="",
+		pk="";	
 	
-	function modificarInformacion(){
+	function modificarInformacion() {
 	
-		PROF_PASS = document.getElementById("PROF_PASS_editar").value;
-		PROF_NOMBRE = document.getElementById("PROF_NOMBRE_editar").value;
-		PROF_AP_PAT = document.getElementById("PROF_AP_PAT_editar").value;
-		PROF_AP_MAT = document.getElementById("PROF_AP_MAT_editar").value;
-		PROF_TELEFONO = document.getElementById("PROF_TELEFONO_editar").value;
+		PROF_PASS      = document.getElementById("PROF_PASS_editar").value;
+		PROF_NOMBRE    = document.getElementById("PROF_NOMBRE_editar").value;
+		PROF_AP_PAT    = document.getElementById("PROF_AP_PAT_editar").value;
+		PROF_AP_MAT    = document.getElementById("PROF_AP_MAT_editar").value;
+		PROF_TELEFONO  = document.getElementById("PROF_TELEFONO_editar").value;
 		PROF_DIRECCION = document.getElementById("PROF_DIRECCION_editar").value;
-		PROF_EMAIL = document.getElementById("PROF_EMAIL_editar").value;
-		PROF_GEN_ID = document.getElementById("PROF_GEN_ID_editar").value;
-		PROF_RUN = document.getElementById("PROF_RUN_editar").value;
-		}
+		PROF_EMAIL     = document.getElementById("PROF_EMAIL_editar").value;
+		PROF_GEN_ID    = document.getElementById("PROF_GEN_ID_editar").value;
+		PROF_RUN       = document.getElementById("PROF_RUN_editar").value;
 		
-		if(PROF_PASS!="" && PROF_NOMBRE!="" && PROF_AP_PAT!="" && PROF_AP_MAT!="" && PROF_TELEFONO!="" && PROF_DIRECCION!="" && PROF_EMAIL!="" && PROF_GEN_ID!=""){
+		if(
+			PROF_PASS != ""
+			&& PROF_NOMBRE != ""
+			&& PROF_AP_PAT != ""
+			&& PROF_AP_MAT != ""
+			&& PROF_TELEFONO != ""
+			&& PROF_DIRECCION != ""
+			&& PROF_EMAIL!= ""
+			&& PROF_GEN_ID != ""
+		){
+
 			ajax_("../control/controlador_profesor.php?PROF_PASS_editar="+PROF_PASS+"&PROF_NOMBRE_editar="+PROF_NOMBRE+"&PROF_AP_PAT_editar="+PROF_AP_PAT+"&PROF_AP_MAT_editar="+PROF_AP_MAT+"&PROF_TELEFONO_editar="+PROF_TELEFONO+"&PROF_DIRECCION_editar="+PROF_DIRECCION+"&PROF_EMAIL_editar="+PROF_EMAIL+"&PROF_GEN_ID_editar="+PROF_GEN_ID+"&PROF_RUN_editar="+PROF_RUN);
-		}else{
+		} else {
 			alert("Ingrese toda la informacion.");
-		}		
+		}
 	}
 </script>
 </head>
