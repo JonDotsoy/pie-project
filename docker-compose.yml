@@ -1,0 +1,17 @@
+
+web:
+  build: "."
+  ports: 
+    - "32768:80"
+  links:
+    - "db:db"
+
+db:
+  image: "mariadb"
+  environment:
+    MYSQL_DATABASE: "pie"
+    MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    MYSQL_ROOT_PASSWORD: ""
+  volumes:
+    - "db/db.sql:/docker-entrypoint-initdb.d/migrate.sql:ro"
+
